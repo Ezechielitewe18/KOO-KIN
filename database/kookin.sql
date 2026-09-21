@@ -313,8 +313,13 @@ INSERT INTO `plats` (`categorie_id`, `nom`, `slug`, `description`, `prix`, `phot
 (2, 'Kwanga', 'kwanga', 'Pain de manioc fermenté, une spécialité authentique.', 10000, 'plats/kwanga.jpg', 1, 0, 1, 0, 4),
 (3, 'Poulet braisé', 'poulet-braise', 'Poulet entier braisé au feu de bois, tendre et savoureux.', 10000, 'plats/poulet-braise.jpg', 1, 1, 0, 0, 1),
 (3, 'Boeuf braisé', 'boeuf-braise', 'Brochettes de boeuf marinées et braisées.', 10000, 'plats/boeuf-braise.jpg', 1, 0, 0, 0, 2),
-(4, 'Jus de gingembre', 'jus-de-gingembre', 'Jus de gingembre frais, fait maison.', 10000, 'plats/jus-gingembre.jpg', 1, 0, 1, 0, 1),
-(4, 'Eau minérale 1,5L', 'eau-minerale', 'Eau minérale fraîche.', 10000, 'plats/eau.jpg', 1, 0, 1, 0, 2),
+(4, 'Coca-Cola', 'coca-cola', 'Coca-Cola bien frais, bouteille 50 cl.', 3000, 'boissons/coca-cola.jpg', 1, 0, 1, 0, 1),
+(4, 'Fanta', 'fanta', 'Fanta orange bien frais, bouteille 50 cl.', 3000, 'boissons/fanta.jpg', 1, 0, 1, 0, 2),
+(4, 'Sprite', 'sprite', 'Sprite citron-citron vert bien frais, bouteille 50 cl.', 3000, 'boissons/sprite.jpg', 1, 0, 1, 0, 3),
+(4, 'Vitalo Orange', 'vitalo-orange', 'Boisson Vitalo orange, 50 cl.', 3000, 'boissons/vitalo.jpg', 1, 0, 1, 0, 4),
+(4, 'Malta Guinness', 'malta-guinness', 'Malta Guinness, boisson maltée sans alcool.', 3000, 'boissons/malta.jpg', 1, 0, 1, 0, 5),
+(4, 'Jus de gingembre', 'jus-de-gingembre', 'Jus de gingembre frais, fait maison.', 3000, 'plats/jus-gingembre.jpg', 1, 0, 1, 0, 6),
+(4, 'Eau minérale 1,5L', 'eau-minerale', 'Eau minérale fraîche.', 3000, 'plats/eau.jpg', 1, 0, 1, 0, 7),
 (5, 'Crème de yaourt', 'creme-yaourt', 'Crème de yaourt sucrée.', 10000, 'plats/creme-yaourt.jpg', 1, 0, 0, 0, 1),
 (6, 'Menu Kintambo', 'menu-kintambo', 'Poulet à la sauce + accompagnement + boisson.', 10000, 'plats/menu-kintambo.jpg', 1, 1, 0, 0, 1);
 
