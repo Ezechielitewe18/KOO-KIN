@@ -70,8 +70,8 @@ require BASE_PATH . 'includes/front/chatbox.php';
 <div class="overlay" id="overlay-panier"></div>
 
 <script>
-    const KOOKIN_URL = <?= json_encode(url('/')) ?>;
-    const KOOKIN_PARAMS = <?= json_encode([
+    window.KOOKIN_URL = <?= json_encode(rtrim(url('/'), '/')) ?>;
+    window.KOOKIN_PARAMS = <?= json_encode([
         'whatsapp' => (string) param('whatsapp', '243994266536'),
         'map_lien' => (string) param('map_lien', ''),
         'telephone' => (string) param('telephone', ''),
