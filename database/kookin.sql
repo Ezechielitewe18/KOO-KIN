@@ -332,7 +332,7 @@ INSERT INTO `livraisons` (`commune`, `zone`, `tarif`, `delai`) VALUES
 
 -- Réservations
 INSERT INTO `reservations` (`nom`, `telephone`, `nb_personnes`, `date_reservation`, `heure_reservation`, `message`, `statut`) VALUES
-('Client Démo', '+243 8xx xxx xxx', 4, '2026-09-26', '19:30:00', 'Table près de la fenêtre', 'en_attente');
+('Amina Kalonji', '+243 8xx xxx xxx', 4, '2026-09-26', '19:30:00', 'Table près de la fenêtre', 'en_attente');
 
 -- Promotions
 INSERT INTO `promotions` (`plat_id`, `nom`, `description`, `prix_normal`, `prix_promo`, `date_debut`, `date_fin`, `actif`) VALUES

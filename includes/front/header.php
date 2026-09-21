@@ -18,8 +18,8 @@ if (config('app.debug')) {
 }
 
 $horaireDuJour = db()->one(
-    'SELECT ouverture, fermeture, ferme FROM horaires WHERE libelle = ? ORDER BY id LIMIT 1',
-    [date('l')]
+    'SELECT ouverture, fermeture, ferme FROM horaires WHERE id = ? LIMIT 1',
+    [(int) date('N')]
 );
 $statut = 'ferme';
 if ($horaireDuJour && (int) $horaireDuJour['ferme'] === 0 && $horaireDuJour['ouverture'] && $horaireDuJour['fermeture']) {
@@ -88,7 +88,6 @@ if ($horaireDuJour && (int) $horaireDuJour['ferme'] === 0 && $horaireDuJour['ouv
         <a href="<?= e(url('galerie.php')) ?>" class="<?= $actif === 'galerie' ? 'actif' : '' ?>">Galerie</a>
         <a href="<?= e(url('traiteur.php')) ?>" class="<?= $actif === 'traiteur' ? 'actif' : '' ?>">Traiteur &amp; événements</a>
         <a href="<?= e(url('promotions.php')) ?>" class="<?= $actif === 'promotions' ? 'actif' : '' ?>">Promotions</a>
-        <a href="<?= e(url('contact.php')) ?>" class="<?= $actif === 'contact' ? 'actif' : '' ?>">Nous trouver</a>
         <a href="<?= e(url('contact.php')) ?>" class="<?= $actif === 'contact' ? 'actif' : '' ?>">Contact</a>
     </nav>
     <div class="sidebar__contact">

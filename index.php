@@ -214,17 +214,6 @@ require BASE_PATH . 'includes/front/header.php';
     </div>
 </section>
 
-<style>
-    .ico-info {
-        width: 46px; height: 46px; flex: none;
-        border-radius: 14px;
-        background: var(--or-pale);
-        display: grid; place-items: center;
-        color: var(--or-fonce);
-    }
-    .ico-info svg { width: 22px; height: 22px; }
-</style>
-
 <?php
 Panier::count();
 require BASE_PATH . 'includes/front/footer.php';

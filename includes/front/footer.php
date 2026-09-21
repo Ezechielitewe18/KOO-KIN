@@ -12,7 +12,7 @@ require BASE_PATH . 'includes/front/chatbox.php';
                 <h4>KOO-KIN</h4>
                 <p style="font-size:.9rem"><?= e((string) param('footer_texte', 'Cuisine Congolaise Authentique — Saveurs de chez nous.')) ?></p>
                 <p class="statut-ouvert <?php
-                    $h = db()->one('SELECT ouverture, fermeture, ferme FROM horaires WHERE libelle = ? ORDER BY id LIMIT 1', [date('l')]);
+                    $h = db()->one('SELECT ouverture, fermeture, ferme FROM horaires WHERE id = ? LIMIT 1', [(int) date('N')]);
                     $open = false;
                     if ($h) { $n = time(); $o = strtotime('today ' . $h['ouverture']); $f = strtotime('today ' . $h['fermeture']); if ($f < $o) { $f += 86400; } $open = ((int) $h['ferme'] === 0 && $n >= $o && $n <= $f); }
                 echo $open ? 'ouvert' : 'ferme'; ?>"><span class="point"></span><span style="font-size:.82rem"><?= $open ? 'Ouvert maintenant' : 'Fermé actuellement' ?></span></p>
@@ -33,7 +33,6 @@ require BASE_PATH . 'includes/front/chatbox.php';
                     <li><a href="<?= e(url('livraison.php')) ?>">Livraison</a></li>
                     <li><a href="<?= e(url('promotions.php')) ?>">Promotions</a></li>
                     <li><a href="<?= e(url('histoire.php')) ?>">Notre histoire</a></li>
-                    <li><a href="<?= e(url('contact.php')) ?>">Nous trouver</a></li>
                     <li><a href="<?= e(url('contact.php')) ?>">Contact</a></li>
                 </ul>
             </div>
