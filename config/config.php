@@ -32,6 +32,8 @@ $config = [
         'session_lifetime' => 7200,
         'csrf_name'      => '_token',
         'max_upload_mb'  => 4,
+        'max_tentatives' => 5,
+        'blocage_minutes' => 15,
     ],
 ];
 

@@ -163,6 +163,8 @@ function icone(string $nom, string $classe = ''): string
         'grill' => '<path d="M12 22a7 7 0 0 0 7-7c0-4-3-6-4-9-1.5 2-3 3-4 5-1-1-1.5-2-1.5-3C7 10 5 12 5 15a7 7 0 0 0 7 7Z"/>',
         'dessert' => '<path d="M8 11a4 4 0 0 1 8 0"/><path d="M8 11h8l-4 10Z"/><path d="M12 5V3"/>',
         'accompagnement' => '<path d="M3 12h18"/><path d="M5 12a7 7 0 0 0 14 0"/><path d="M2 21h20"/>',
+        'utilisateur' => '<circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/>',
+        'cle' => '<circle cx="8" cy="15" r="4"/><path d="m10.8 12.2 8-8"/><path d="m17 6 2 2"/>',
     ];
 
     $corps = $svg[$nom] ?? $svg['fleche'];

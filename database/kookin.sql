@@ -20,6 +20,8 @@ CREATE TABLE `admins` (
   `password_hash` VARCHAR(255) NOT NULL,
   `role` ENUM('superadmin','admin') NOT NULL DEFAULT 'admin',
   `actif` TINYINT(1) NOT NULL DEFAULT 1,
+  `tentatives_echouees` INT UNSIGNED NOT NULL DEFAULT 0,
+  `bloque_jusqua` DATETIME NULL,
   `created_at` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`),
   UNIQUE KEY `uq_admins_username` (`username`),

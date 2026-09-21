@@ -42,7 +42,7 @@ class Validation
 
             case 'min':
                 $min = (int) ($params[0] ?? 0);
-                if (is_string($value) && mb_strlen($value) < $min) {
+                if (is_string($value) && trim($value) !== '' && mb_strlen($value) < $min) {
                     $this->errors[$field] = 'Le champ « ' . $label . ' » doit contenir au moins ' . $min . ' caractères.';
                 }
                 break;

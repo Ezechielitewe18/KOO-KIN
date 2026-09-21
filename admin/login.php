@@ -19,8 +19,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['login'])) {
 
     if ($username === '' || $password === '') {
         Flash::error('Veuillez renseigner votre identifiant et votre mot de passe.');
+    } elseif (Auth::bloque($username)) {
+        Flash::error('Compte temporairement bloqué après plusieurs tentatives échouées. Réessayez dans quelques minutes.');
     } elseif (Auth::attempt($username, $password)) {
-        Flash::success('Bienvenue, ' . $username . '.');
+        $connecte = Auth::user();
+        Flash::success('Bienvenue, ' . (string) ($connecte['username'] ?? $username) . '.');
         admin_redirect('index.php');
     } else {
         Flash::error('Identifiant ou mot de passe incorrect.');

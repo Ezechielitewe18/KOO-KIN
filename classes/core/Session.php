@@ -11,12 +11,20 @@ class Session
         if (session_status() === PHP_SESSION_ACTIVE) {
             return;
         }
+
+        $securise = !empty($_SERVER['HTTPS']) && strtolower((string) $_SERVER['HTTPS']) !== 'off';
+
+        ini_set('session.use_strict_mode', '1');
+        ini_set('session.use_only_cookies', '1');
+        ini_set('session.cookie_httponly', '1');
+
         session_name($name);
         session_set_cookie_params([
             'lifetime' => $lifetime,
             'path' => '/',
             'httponly' => true,
             'samesite' => 'Lax',
+            'secure' => $securise,
         ]);
         session_start();
     }

@@ -42,9 +42,14 @@ $navigation = [
             ['cle' => 'livraisons', 'url' => 'livraisons.php', 'label' => 'Livraison', 'icone' => 'livraison'],
             ['cle' => 'horaires', 'url' => 'horaires.php', 'label' => 'Horaires', 'icone' => 'telephone'],
             ['cle' => 'parametres', 'url' => 'parametres.php', 'label' => 'Paramètres', 'icone' => 'pinceau'],
+            ['cle' => 'compte', 'url' => 'compte.php', 'label' => 'Mon compte', 'icone' => 'utilisateur'],
         ],
     ],
 ];
+
+if (admin_est_superadmin()) {
+    $navigation[2]['liens'][] = ['cle' => 'comptes', 'url' => 'comptes.php', 'label' => 'Comptes admin', 'icone' => 'cle'];
+}
 ?>
 <!doctype html>
 <html lang="fr">
@@ -98,10 +103,10 @@ $navigation = [
         <header class="adm-topbar">
             <button type="button" class="adm-burger" id="adm-burger" aria-label="Ouvrir le menu"><?= icone('menu') ?></button>
             <h1 class="adm-topbar__titre"><?= e($admin_titre) ?></h1>
-            <div class="adm-topbar__user">
+            <a href="<?= e(admin_url('compte.php')) ?>" class="adm-topbar__user" title="Mon compte">
                 <span><?= e((string) ($admin['username'] ?? 'admin')) ?></span>
                 <span class="adm-role"><?= e((string) ($admin['role'] ?? 'admin')) ?></span>
-            </div>
+            </a>
         </header>
 
         <main class="adm-content">

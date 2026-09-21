@@ -27,6 +27,13 @@ mb_internal_encoding('UTF-8');
 ini_set('default_charset', 'UTF-8');
 header('Content-Type: text/html; charset=UTF-8');
 
+if (!headers_sent()) {
+    header('X-Content-Type-Options: nosniff');
+    header('X-Frame-Options: SAMEORIGIN');
+    header('Referrer-Policy: strict-origin-when-cross-origin');
+    header('Permissions-Policy: geolocation=(), microphone=(), camera=()');
+}
+
 if (Config::get('app.debug')) {
     ini_set('display_errors', '1');
     error_reporting(E_ALL);
