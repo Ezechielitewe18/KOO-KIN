@@ -158,6 +158,11 @@ function icone(string $nom, string $classe = ''): string
         'verifier' => '<path d="M20 6 9 17l-5-5"/>',
         'etoile' => '<path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1Z" fill="currentColor" stroke="none"/>',
         'pinceau' => '<path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 1 1 3 3L7 19H4v-3L16.5 3.5Z"/>',
+        'plat' => '<circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/>',
+        'boisson' => '<path d="M6 3h12l-1.5 16a2 2 0 0 1-2 1.8H9.5a2 2 0 0 1-2-1.8Z"/><path d="M6.4 9h11.2"/>',
+        'grill' => '<path d="M12 22a7 7 0 0 0 7-7c0-4-3-6-4-9-1.5 2-3 3-4 5-1-1-1.5-2-1.5-3C7 10 5 12 5 15a7 7 0 0 0 7 7Z"/>',
+        'dessert' => '<path d="M8 11a4 4 0 0 1 8 0"/><path d="M8 11h8l-4 10Z"/><path d="M12 5V3"/>',
+        'accompagnement' => '<path d="M3 12h18"/><path d="M5 12a7 7 0 0 0 14 0"/><path d="M2 21h20"/>',
     ];
 
     $corps = $svg[$nom] ?? $svg['fleche'];

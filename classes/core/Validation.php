@@ -55,13 +55,13 @@ class Validation
                 break;
 
             case 'numeric':
-                if (!is_numeric($value)) {
+                if ($value !== null && trim((string) $value) !== '' && !is_numeric($value)) {
                     $this->errors[$field] = 'Le champ « ' . $label . ' » doit être un nombre.';
                 }
                 break;
 
             case 'int':
-                if (filter_var($value, FILTER_VALIDATE_INT) === false) {
+                if ($value !== null && trim((string) $value) !== '' && filter_var($value, FILTER_VALIDATE_INT) === false) {
                     $this->errors[$field] = 'Le champ « ' . $label . ' » doit être un entier.';
                 }
                 break;
@@ -79,15 +79,17 @@ class Validation
                 break;
 
             case 'date':
-                $format = $params[0] ?? 'Y-m-d';
-                $d = \DateTime::createFromFormat($format, (string) $value);
-                if (!$d || $d->format($format) !== (string) $value) {
-                    $this->errors[$field] = 'Le champ « ' . $label . ' » doit être une date valide.';
+                if ($value !== null && trim((string) $value) !== '') {
+                    $format = $params[0] ?? 'Y-m-d';
+                    $d = \DateTime::createFromFormat($format, (string) $value);
+                    if (!$d || $d->format($format) !== (string) $value) {
+                        $this->errors[$field] = 'Le champ « ' . $label . ' » doit être une date valide.';
+                    }
                 }
                 break;
 
             case 'time':
-                if (!preg_match('/^([01]\d|2[0-3]):[0-5]\d(:[0-5]\d)?$/', (string) $value)) {
+                if ($value !== null && trim((string) $value) !== '' && !preg_match('/^([01]\d|2[0-3]):[0-5]\d(:[0-5]\d)?$/', (string) $value)) {
                     $this->errors[$field] = 'Le champ « ' . $label . ' » doit être une heure valide (HH:MM).';
                 }
                 break;

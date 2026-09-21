@@ -294,12 +294,12 @@ INSERT INTO `admins` (`username`, `email`, `password_hash`, `role`) VALUES
 
 -- Catégories
 INSERT INTO `categories` (`nom`, `slug`, `description`, `icone`, `ordre`) VALUES
-('Plats',            'plats',            'Nos plats principaux',          '🍛', 1),
-('Accompagnements',  'accompagnements',  'Le bon accompagnement du plat', '🍚', 2),
-('Grillades',        'grillades',        'Grillades au feu de bois',      '🍢', 3),
-('Boissons',         'boissons',         'Boissons fraîches et locales',  '🥤', 4),
-('Desserts',         'desserts',         'Pour finir en douceur',         '🍌', 5),
-('Menus spéciaux',   'menus-speciaux',   'Nos formules complètes',        '🌟', 6);
+('Plats',            'plats',            'Nos plats principaux',          'plat', 1),
+('Accompagnements',  'accompagnements',  'Le bon accompagnement du plat', 'accompagnement', 2),
+('Grillades',        'grillades',        'Grillades au feu de bois',      'grill', 3),
+('Boissons',         'boissons',         'Boissons fraîches et locales',  'boisson', 4),
+('Desserts',         'desserts',         'Pour finir en douceur',         'dessert', 5),
+('Menus spéciaux',   'menus-speciaux',   'Nos formules complètes',        'etoile', 6);
 
 -- Plats
 INSERT INTO `plats` (`categorie_id`, `nom`, `slug`, `description`, `prix`, `photo`, `disponible`, `populaire`, `vegan`, `épicé`, `ordre`) VALUES
