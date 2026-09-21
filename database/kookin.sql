@@ -304,19 +304,19 @@ INSERT INTO `categories` (`nom`, `slug`, `description`, `icone`, `ordre`) VALUES
 -- Plats
 INSERT INTO `plats` (`categorie_id`, `nom`, `slug`, `description`, `prix`, `photo`, `disponible`, `populaire`, `vegan`, `épicé`, `ordre`) VALUES
 (1, 'Poulet à la sauce', 'poulet-a-la-sauce', 'Poulet mijoté dans notre sauce maison, servi avec l''accompagnement de votre choix.', 10000, 'plats/poulet-a-la-sauce.jpg', 1, 1, 0, 0, 1),
-(1, 'Côtis fumés', 'cotis-fumes', 'Côtis de porc fumés au feu de bois, une spécialité de chez nous.', 12000, 'plats/cotis-fumes.jpg', 1, 1, 0, 0, 2),
-(1, 'Malua grillé', 'malua-grille', 'Poisson malua grillé, mariné aux herbes et épices locales.', 15000, 'plats/malua-grille.jpg', 1, 1, 0, 1, 3),
-(1, 'Haricots', 'haricots', 'Haricots mijotés à la tomate et aux condiments, un grand classique.', 7000, 'plats/haricots.jpg', 1, 0, 1, 0, 4),
-(2, 'Riz', 'riz', 'Riz blanc parfumé, cuit à la vapeur.', 3000, 'plats/riz.jpg', 1, 0, 1, 0, 1),
-(2, 'Fufu', 'fufu', 'Fufu de manioc, préparé traditionnellement.', 2000, 'plats/fufu.jpg', 1, 0, 1, 0, 2),
-(2, 'Banane plantain', 'banane-plantain', 'Banane plantain mûre, frite ou grillée.', 3000, 'plats/banane-plantain.jpg', 1, 0, 1, 0, 3),
-(2, 'Kwanga', 'kwanga', 'Pain de manioc fermenté, une spécialité authentique.', 3000, 'plats/kwanga.jpg', 1, 0, 1, 0, 4),
-(3, 'Poulet braisé', 'poulet-braise', 'Poulet entier braisé au feu de bois, tendre et savoureux.', 18000, 'plats/poulet-braise.jpg', 1, 1, 0, 0, 1),
-(3, 'Boeuf braisé', 'boeuf-braise', 'Brochettes de boeuf marinées et braisées.', 15000, 'plats/boeuf-braise.jpg', 1, 0, 0, 0, 2),
-(4, 'Jus de gingembre', 'jus-de-gingembre', 'Jus de gingembre frais, fait maison.', 3000, 'plats/jus-gingembre.jpg', 1, 0, 1, 0, 1),
-(4, 'Eau minérale 1,5L', 'eau-minerale', 'Eau minérale fraîche.', 2000, 'plats/eau.jpg', 1, 0, 1, 0, 2),
-(5, 'Crème de yaourt', 'creme-yaourt', 'Crème de yaourt sucrée.', 4000, 'plats/creme-yaourt.jpg', 1, 0, 0, 0, 1),
-(6, 'Menu Kintambo', 'menu-kintambo', 'Poulet à la sauce + accompagnement + boisson.', 15000, 'plats/menu-kintambo.jpg', 1, 1, 0, 0, 1);
+(1, 'Côtis fumés', 'cotis-fumes', 'Côtis de porc fumés au feu de bois, une spécialité de chez nous.', 10000, 'plats/cotis-fumes.jpg', 1, 1, 0, 0, 2),
+(1, 'Malua grillé', 'malua-grille', 'Poisson malua grillé, mariné aux herbes et épices locales.', 10000, 'plats/malua-grille.jpg', 1, 1, 0, 1, 3),
+(1, 'Haricots', 'haricots', 'Haricots mijotés à la tomate et aux condiments, un grand classique.', 10000, 'plats/haricots.jpg', 1, 0, 1, 0, 4),
+(2, 'Riz', 'riz', 'Riz blanc parfumé, cuit à la vapeur.', 10000, 'plats/riz.jpg', 1, 0, 1, 0, 1),
+(2, 'Fufu', 'fufu', 'Fufu de manioc, préparé traditionnellement.', 10000, 'plats/fufu.jpg', 1, 0, 1, 0, 2),
+(2, 'Banane plantain', 'banane-plantain', 'Banane plantain mûre, frite ou grillée.', 10000, 'plats/banane-plantain.jpg', 1, 0, 1, 0, 3),
+(2, 'Kwanga', 'kwanga', 'Pain de manioc fermenté, une spécialité authentique.', 10000, 'plats/kwanga.jpg', 1, 0, 1, 0, 4),
+(3, 'Poulet braisé', 'poulet-braise', 'Poulet entier braisé au feu de bois, tendre et savoureux.', 10000, 'plats/poulet-braise.jpg', 1, 1, 0, 0, 1),
+(3, 'Boeuf braisé', 'boeuf-braise', 'Brochettes de boeuf marinées et braisées.', 10000, 'plats/boeuf-braise.jpg', 1, 0, 0, 0, 2),
+(4, 'Jus de gingembre', 'jus-de-gingembre', 'Jus de gingembre frais, fait maison.', 10000, 'plats/jus-gingembre.jpg', 1, 0, 1, 0, 1),
+(4, 'Eau minérale 1,5L', 'eau-minerale', 'Eau minérale fraîche.', 10000, 'plats/eau.jpg', 1, 0, 1, 0, 2),
+(5, 'Crème de yaourt', 'creme-yaourt', 'Crème de yaourt sucrée.', 10000, 'plats/creme-yaourt.jpg', 1, 0, 0, 0, 1),
+(6, 'Menu Kintambo', 'menu-kintambo', 'Poulet à la sauce + accompagnement + boisson.', 10000, 'plats/menu-kintambo.jpg', 1, 1, 0, 0, 1);
 
 -- Menu du jour
 INSERT INTO `menus_jour` (`titre`, `plats_text`, `accompagnements_text`, `prix`, `note`, `date_debut`, `date_fin`, `actif`) VALUES
@@ -326,9 +326,9 @@ INSERT INTO `menus_jour` (`titre`, `plats_text`, `accompagnements_text`, `prix`,
 INSERT INTO `livraisons` (`commune`, `zone`, `tarif`, `delai`) VALUES
 ('Kintambo',   'Centre',        6000,  '30 min'),
 ('Kintambo',   'Vélodrome',     6000,  '30 min'),
-('Gombe',      'Toute commune', 8000,  '45 min'),
-('Ngaliema',   'Toute commune', 10000, '50 min'),
-('Kinshasa',   'Autres communes', 8000, '1h');
+('Gombe',      'Toute commune', 6000,  '45 min'),
+('Ngaliema',   'Toute commune', 6000, '50 min'),
+('Kinshasa',   'Autres communes', 6000, '1h');
 
 -- Réservations
 INSERT INTO `reservations` (`nom`, `telephone`, `nb_personnes`, `date_reservation`, `heure_reservation`, `message`, `statut`) VALUES
