@@ -341,7 +341,7 @@ INSERT INTO `reservations` (`nom`, `telephone`, `nb_personnes`, `date_reservatio
 
 -- Promotions
 INSERT INTO `promotions` (`plat_id`, `nom`, `description`, `prix_normal`, `prix_promo`, `date_debut`, `date_fin`, `actif`) VALUES
-(3, 'Malua grillé', 'Offre du moment : poisson malua grillé à prix réduit, du lundi au vendredi.', 15000, 12000, '2026-09-01', '2026-10-01', 1);
+(3, 'Malua grillé', 'Offre du moment : poisson malua grillé à prix réduit, du lundi au vendredi.', 10000, 8000, '2026-09-01', '2026-10-01', 0);
 
 -- Horaires
 INSERT INTO `horaires` (`jour`, `libelle`, `ouverture`, `fermeture`, `ferme`) VALUES
