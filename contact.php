@@ -41,8 +41,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['contact'])) {
     redirect('contact.php');
 }
 
-$telephone = (string) param('telephone', '+243 8xx xxx xxx');
-$whatsapp  = (string) param('whatsapp', '2438xxxxxxx');
+$telephone = (string) param('telephone', '+243 994 266 536');
+$whatsapp  = (string) param('whatsapp', '243994266536');
 $email     = (string) param('email', 'contact@koo-kin.cd');
 
 $page = [

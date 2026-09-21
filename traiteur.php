@@ -165,7 +165,7 @@ if (isset($_GET['merci'])): ?>
                     <li><strong>Le jour J</strong><span>Nous préparons et livrons vos plats à l'heure convenue.</span></li>
                 </ol>
                 <div class="menu-note" style="margin-top:1.2rem">
-                    Besoin d'une réponse rapide ? Appelez-nous au <?= e((string) param('telephone', '+243 8xx xxx xxx')) ?>.
+                    Besoin d'une réponse rapide ? Appelez-nous au <?= e((string) param('telephone', '+243 994 266 536')) ?>.
                 </div>
             </div>
         </div>

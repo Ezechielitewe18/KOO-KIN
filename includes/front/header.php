@@ -8,8 +8,8 @@ $description = $page['description'] ?? 'Restaurant de cuisine congolaise authent
 $actif = $page['actif'] ?? '';
 $isHome = $page['home'] ?? false;
 
-$phone = (string) param('telephone', '+243 8xx xxx xxx');
-$whatsapp = (string) param('whatsapp', '2438xxxxxxx');
+$phone = (string) param('telephone', '+243 994 266 536');
+$whatsapp = (string) param('whatsapp', '243994266536');
 
 if (config('app.debug')) {
     error_reporting(E_ALL);

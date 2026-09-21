@@ -106,7 +106,7 @@ if ($confirmation) {
     $waMessage = rawurlencode(
         "Bonjour KOO-KIN, je viens de passer la commande " . $confirmation['code'] . " d'un total de " . format_prix($confirmation['total']) . ". Merci de la confirmer."
     );
-    $waLien = 'https://wa.me/' . (string) param('whatsapp', '2438xxxxxxx') . '?text=' . $waMessage;
+    $waLien = 'https://wa.me/' . (string) param('whatsapp', '243994266536') . '?text=' . $waMessage;
 }
 
 $page = [

@@ -36,7 +36,7 @@
         },
         parler: {
             texte: 'Un conseiller KOO-KIN vous répond sous peu. Vous pouvez aussi nous contacter directement sur WhatsApp.',
-            lien: { txt: 'WhatsApp', href: 'https://wa.me/' + ((KOOKIN_PARAMS && KOOKIN_PARAMS.whatsapp) || '2438xxxxxxx') },
+            lien: { txt: 'WhatsApp', href: 'https://wa.me/' + ((KOOKIN_PARAMS && KOOKIN_PARAMS.whatsapp) || '243994266536') },
             choix: ['Parler à quelqu\'un'],
         },
         defaut: {

@@ -6,7 +6,7 @@ require __DIR__ . '/includes/init.php';
 
 $zones = db()->all('SELECT * FROM livraisons WHERE actif = 1 ORDER BY tarif, commune');
 $tarifMin = (int) param('livraison_min', 6000);
-$whatsapp = (string) param('whatsapp', '2438xxxxxxx');
+$whatsapp = (string) param('whatsapp', '243994266536');
 
 $page = [
     'titre' => 'Livraison â€” KOO-KIN',

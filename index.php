@@ -61,7 +61,7 @@ require BASE_PATH . 'includes/front/header.php';
             <div class="hero__mini">
                 <div><strong><?= e((string) param('livraison_min', '6 000')) ?> CDF</strong><span>Livraison dès</span></div>
                 <div><strong>11h</strong><span>Nous livrons dès</span></div>
-                <div><strong><?= e((string) param('telephone', '+243 8xx xxx xxx')) ?></strong><span>Appelez-nous</span></div>
+                <div><strong><?= e((string) param('telephone', '+243 994 266 536')) ?></strong><span>Appelez-nous</span></div>
             </div>
         </div>
     </div>
