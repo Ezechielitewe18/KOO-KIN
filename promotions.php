@@ -9,7 +9,7 @@ $promotions = db()->all('SELECT p.*, pl.nom AS plat_nom FROM promotions p LEFT J
 $page = [
     'titre' => 'Promotions — KOO-KIN',
     'actif' => 'promotions',
-    'description' => 'Les offres promotionnelles en cours chez KOO-KIN : profitez de prix avantageux sur nos plats congolais.',
+    'description' => 'Les offres promotionnelles en cours chez KOO-KIN : profitez de prix avantageux sur nos spécialités congolaises.',
     'fil' => 'Promotions',
 ];
 

@@ -30,7 +30,7 @@ foreach ($plats as $plat) {
 $page = [
     'titre' => 'Notre menu — KOO-KIN',
     'actif' => 'menu',
-    'description' => 'Découvrez le menu de KOO-KIN : plats congolais authentiques, grillades, accompagnements, boissons et desserts.',
+    'description' => 'Découvrez le menu de KOO-KIN : spécialités congolaises authentiques, grillades, accompagnements, boissons et desserts.',
     'fil' => 'Notre menu',
 ];
 

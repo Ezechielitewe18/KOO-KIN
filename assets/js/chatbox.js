@@ -10,7 +10,7 @@
 
     const reponses = {
         menu: {
-            texte: 'Voici notre menu : nos plats congolais authentiques avec prix en CDF.',
+            texte: 'Voici notre menu : spécialités congolaises authentiques, avec prix en CDF.',
             lien: { txt: 'Voir le menu', href: URL + '/menu.php' },
             choix: ['Voir le menu'],
         },
