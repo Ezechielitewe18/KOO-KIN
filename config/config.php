@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 const APP_NAME   = 'KOO-KIN';
 const APP_SLOGAN = 'Cuisine Congolaise Authentique';
-const DEMO_MODE  = true;
 
 $env = getenv('KOOKIN_ENV') ?: 'local';
 

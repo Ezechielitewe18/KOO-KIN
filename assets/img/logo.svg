@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 120" role="img" aria-label="KOO-KIN">
+  <defs>
+    <linearGradient id="or" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#e0b93c"/>
+      <stop offset="1" stop-color="#a8841b"/>
+    </linearGradient>
+  </defs>
+  <g fill="none" stroke="url(#or)" stroke-width="2">
+    <circle cx="60" cy="60" r="42"/>
+    <circle cx="60" cy="60" r="35" stroke-width="1" opacity=".55"/>
+  </g>
+  <text x="60" y="74" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="38" font-weight="700" fill="url(#or)">KK</text>
+  <text x="128" y="56" font-family="Georgia, 'Times New Roman', serif" font-size="34" letter-spacing="4" fill="#faf6ee">KOO-KIN</text>
+  <text x="130" y="78" font-family="Jost, 'Segoe UI', sans-serif" font-size="12" letter-spacing="5.5" fill="url(#or)">CUISINE CONGOLAISE</text>
+</svg>

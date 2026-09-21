@@ -1,7 +1,6 @@
 -- ============================================================
 -- KOO-KIN - Cuisine Congolaise Authentique
 -- Base de données MySQL
--- Prototype de démonstration - données démonstratives
 -- ============================================================
 
 SET NAMES utf8mb4;
@@ -286,11 +285,10 @@ CREATE TABLE `parametres_site` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- ============================================================
--- DONNÉES DE DÉMONSTRATION
--- Marqué [DEMO] - à valider / remplacer par le propriétaire
+-- DONNÉES INITIALES (à adapter par le propriétaire)
 -- ============================================================
 
--- Admin de démonstration : admin / admin123
+-- Compte administrateur : admin / admin123
 INSERT INTO `admins` (`username`, `email`, `password_hash`, `role`) VALUES
 ('admin', 'contact@koo-kin.cd', '$2y$10$wZSRgsY5cJcmd/.1m0fo3e3lkdF8ZVdZuEWeL/7qSZRdB1mfUxb0W', 'superadmin');
 
@@ -303,7 +301,7 @@ INSERT INTO `categories` (`nom`, `slug`, `description`, `icone`, `ordre`) VALUES
 ('Desserts',         'desserts',         'Pour finir en douceur',         '🍌', 5),
 ('Menus spéciaux',   'menus-speciaux',   'Nos formules complètes',        '🌟', 6);
 
--- Plats [DEMO]
+-- Plats
 INSERT INTO `plats` (`categorie_id`, `nom`, `slug`, `description`, `prix`, `photo`, `disponible`, `populaire`, `vegan`, `épicé`, `ordre`) VALUES
 (1, 'Poulet à la sauce', 'poulet-a-la-sauce', 'Poulet mijoté dans notre sauce maison, servi avec l''accompagnement de votre choix.', 10000, 'plats/poulet-a-la-sauce.jpg', 1, 1, 0, 0, 1),
 (1, 'Côtis fumés', 'cotis-fumes', 'Côtis de porc fumés au feu de bois, une spécialité de chez nous.', 12000, 'plats/cotis-fumes.jpg', 1, 1, 0, 0, 2),
@@ -320,7 +318,7 @@ INSERT INTO `plats` (`categorie_id`, `nom`, `slug`, `description`, `prix`, `phot
 (5, 'Crème de yaourt', 'creme-yaourt', 'Crème de yaourt sucrée.', 4000, 'plats/creme-yaourt.jpg', 1, 0, 0, 0, 1),
 (6, 'Menu Kintambo', 'menu-kintambo', 'Poulet à la sauce + accompagnement + boisson.', 15000, 'plats/menu-kintambo.jpg', 1, 1, 0, 0, 1);
 
--- Menu du jour [DEMO]
+-- Menu du jour
 INSERT INTO `menus_jour` (`titre`, `plats_text`, `accompagnements_text`, `prix`, `note`, `date_debut`, `date_fin`, `actif`) VALUES
 ('Menu du jour', 'Matembelé\nHaricots\nPoulet à la sauce\nCôtis fumés\nMalua grillé', 'Riz\nFufu\nBanane plantain\nKwanga', 10000, 'Livraison à partir de 6 000 CDF. Nous livrons à partir de 11h.', NULL, NULL, 1);
 
@@ -332,15 +330,15 @@ INSERT INTO `livraisons` (`commune`, `zone`, `tarif`, `delai`) VALUES
 ('Ngaliema',   'Toute commune', 10000, '50 min'),
 ('Kinshasa',   'Autres communes', 8000, '1h');
 
--- Réservations [DEMO]
+-- Réservations
 INSERT INTO `reservations` (`nom`, `telephone`, `nb_personnes`, `date_reservation`, `heure_reservation`, `message`, `statut`) VALUES
 ('Client Démo', '+243 8xx xxx xxx', 4, '2026-09-26', '19:30:00', 'Table près de la fenêtre', 'en_attente');
 
--- Promotions [DEMO]
+-- Promotions
 INSERT INTO `promotions` (`plat_id`, `nom`, `description`, `prix_normal`, `prix_promo`, `date_debut`, `date_fin`, `actif`) VALUES
 (3, 'Malua grillé', 'Offre du moment : poisson malua grillé à prix réduit, du lundi au vendredi.', 15000, 12000, '2026-09-01', '2026-10-01', 1);
 
--- Horaires [DEMO - à confirmer par le propriétaire]
+-- Horaires
 INSERT INTO `horaires` (`jour`, `libelle`, `ouverture`, `fermeture`, `ferme`) VALUES
 ('Lundi',     'Lundi',    '08:00:00', '22:00:00', 0),
 ('Mardi',     'Mardi',    '08:00:00', '22:00:00', 0),
@@ -366,14 +364,13 @@ INSERT INTO `parametres_site` (`cle`, `valeur`, `description`) VALUES
 ('livraison_min',      '6000', 'Frais de livraison minimum'),
 ('livraison_texte',    'Livraison à Kinshasa. À partir de 6 000 CDF, selon le trajet et la commune. Nous livrons à partir de 11h.', 'Texte livraison'),
 ('horaires_texte',     'Lundi — Dimanche', 'Affichage horaires'),
-('histoire',           '[À compléter par le propriétaire] KOO-KIN propose une cuisine congolaise authentique, avec le souci des saveurs de chez nous.', 'Texte histoire'),
+('histoire',           'KOO-KIN propose une cuisine congolaise authentique, avec le souci des saveurs de chez nous.', 'Texte histoire'),
 ('hero_titre',         'KOO-KIN', 'Titre hero'),
 ('hero_sous_titre',    'Découvrez les saveurs authentiques de chez nous.', 'Sous-titre hero'),
 ('traiteur_texte',     'KOO-KIN vous accompagne également pour vos événements avec un service traiteur adapté à vos besoins.', 'Texte traiteur'),
 ('footer_texte',       'Cuisine Congolaise Authentique — Saveurs de chez nous.', 'Texte footer'),
 ('map_embed',          '', 'Code d\'intégration Google Maps (optionnel)'),
 ('map_lien',           'https://maps.google.com/?q=38+Avenue+Bandundu+Kintambo+Kinshasa', 'Lien itinéraire'),
-('banner_demo',        '1', 'Afficher la bannière de démonstration'),
 ('devise',             'CDF', 'Devise affichée');
 
 SET FOREIGN_KEY_CHECKS = 1;
