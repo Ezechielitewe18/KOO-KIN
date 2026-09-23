@@ -95,6 +95,7 @@ CREATE TABLE `clients` (
   `id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
   `nom` VARCHAR(150) NOT NULL,
   `telephone` VARCHAR(30) NOT NULL,
+  `mot_de_passe_hash` VARCHAR(255) NULL,
   `email` VARCHAR(190) NULL,
   `adresse` VARCHAR(255) NULL,
   `commune` VARCHAR(100) NULL,
@@ -293,6 +294,10 @@ CREATE TABLE `parametres_site` (
 -- Compte administrateur : admin / admin123
 INSERT INTO `admins` (`username`, `email`, `password_hash`, `role`) VALUES
 ('admin', 'contact@koo-kin.cd', '$2y$10$wZSRgsY5cJcmd/.1m0fo3e3lkdF8ZVdZuEWeL/7qSZRdB1mfUxb0W', 'superadmin');
+
+-- Compte client de test : 0999000000 / client123
+INSERT INTO `clients` (`nom`, `telephone`, `email`, `mot_de_passe_hash`) VALUES
+('Client Test', '0999000000', 'client@test.cd', '$2y$10$0m3nngPU3ypU7ZuAG.RoweAE.74R2IFOcZhpoabfwa5hG/zwLcCVi');
 
 -- Catégories
 INSERT INTO `categories` (`nom`, `slug`, `description`, `icone`, `ordre`) VALUES

@@ -204,6 +204,22 @@ p { margin: 0 0 1rem; }
   border-radius: 3px;
   background: var(--or-vif);
 }
+.sidebar__compte { padding: .9rem .8rem .5rem; border-top: 1px solid rgba(201, 162, 39, .18); }
+.sidebar__compte a {
+  display: flex;
+  align-items: center;
+  gap: .75rem;
+  padding: .65rem .9rem;
+  border-radius: var(--rayon-sm);
+  color: rgba(250, 246, 238, .82);
+  font-size: .9rem;
+  margin-bottom: .15rem;
+  letter-spacing: .02em;
+  transition: background var(--transition), color var(--transition);
+}
+.sidebar__compte a:hover { background: rgba(201, 162, 39, .14); color: var(--blanc); }
+.sidebar__compte a.actif { background: linear-gradient(90deg, rgba(201,162,39,.28), transparent); color: var(--blanc); }
+.sidebar__compte svg { width: 17px; height: 17px; flex-shrink: 0; }
 .sidebar__contact { padding: 1.1rem 1.2rem 1.4rem; border-top: 1px solid rgba(201, 162, 39, .18); font-size: .82rem; }
 .sidebar__contact a { display: flex; align-items: center; gap: .5rem; color: rgba(250,246,238,.78); padding: .25rem 0; }
 .sidebar__contact a:hover { color: var(--or-vif); }

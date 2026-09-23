@@ -7,6 +7,10 @@ require __DIR__ . '/includes/init.php';
 use KooKin\Core\Panier;
 use KooKin\Core\Validation;
 use KooKin\Core\Flash;
+use KooKin\Core\ClientAuth;
+
+ClientAuth::requireLogin();
+$cl = ClientAuth::client();
 
 $communes = db()->all('SELECT commune, zone, tarif FROM livraisons WHERE actif = 1 ORDER BY commune, tarif');
 $listCommunes = [];
@@ -60,15 +64,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['commande'])) {
 
     db()->begin();
     try {
-        $client = db()->one('SELECT id FROM clients WHERE telephone = ? LIMIT 1', [$d['telephone']]);
-        if ($client === null) {
-            db()->run('INSERT INTO clients (nom, telephone, adresse, commune) VALUES (?, ?, ?, ?)', [
-                $d['nom'], $d['telephone'], trim((string) ($d['adresse'] ?? '')), trim((string) ($d['commune'] ?? '')),
-            ]);
-            $clientId = db()->lastId();
-        } else {
-            $clientId = (int) $client['id'];
-        }
+        $clientId = ClientAuth::id();
 
         $code = 'CMD-' . date('ymd') . '-' . strtoupper((string) random_int(1000, 9999));
         db()->run(
@@ -193,11 +189,11 @@ if ($confirmation): ?>
                     <div class="form__ligne">
                         <div class="champ">
                             <label for="nom">Nom complet *</label>
-                            <input type="text" id="nom" name="nom" value="<?= e(old('nom')) ?>" required maxlength="150" autocomplete="name">
+                            <input type="text" id="nom" name="nom" value="<?= e(old('nom', (string) ($cl['nom'] ?? ''))) ?>" required maxlength="150" autocomplete="name">
                         </div>
                         <div class="champ">
                             <label for="telephone">Téléphone *</label>
-                            <input type="tel" id="telephone" name="telephone" value="<?= e(old('telephone')) ?>" required placeholder="+243 ..." autocomplete="tel">
+                            <input type="tel" id="telephone" name="telephone" value="<?= e(old('telephone', (string) ($cl['telephone'] ?? ''))) ?>" required placeholder="+243 ..." autocomplete="tel">
                         </div>
                     </div>
 

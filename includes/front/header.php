@@ -8,6 +8,9 @@ $description = $page['description'] ?? 'Restaurant de cuisine congolaise authent
 $actif = $page['actif'] ?? '';
 $isHome = $page['home'] ?? false;
 
+$clientConnecte = \KooKin\Core\ClientAuth::check();
+$client = \KooKin\Core\ClientAuth::client();
+
 $phone = (string) param('telephone', '+243 994 266 536');
 $whatsapp = (string) param('whatsapp', '243994266536');
 
@@ -90,6 +93,15 @@ if ($horaireDuJour && (int) $horaireDuJour['ferme'] === 0 && $horaireDuJour['ouv
         <a href="<?= e(url('promotions.php')) ?>" class="<?= $actif === 'promotions' ? 'actif' : '' ?>">Promotions</a>
         <a href="<?= e(url('contact.php')) ?>" class="<?= $actif === 'contact' ? 'actif' : '' ?>">Contact</a>
     </nav>
+    <div class="sidebar__compte">
+        <?php if ($clientConnecte): ?>
+            <a href="<?= e(url('mon-compte.php')) ?>" class="<?= $actif === 'mon-compte' ? 'actif' : '' ?>"><?= icone('utilisateur') ?> Mon compte</a>
+            <a href="<?= e(url('deconnexion.php')) ?>">Se déconnecter</a>
+        <?php else: ?>
+            <a href="<?= e(url('connexion.php')) ?>" class="<?= $actif === 'connexion' || $actif === 'inscription' ? 'actif' : '' ?>"><?= icone('utilisateur') ?> Se connecter</a>
+            <a href="<?= e(url('inscription.php')) ?>">Créer un compte</a>
+        <?php endif; ?>
+    </div>
     <div class="sidebar__contact">
         <a href="tel:<?= e(preg_replace('/\s+/', '', $phone)) ?>"><?= e($phone) ?></a>
         <a href="https://wa.me/<?= e($whatsapp) ?>" target="_blank" rel="noopener">WhatsApp</a>

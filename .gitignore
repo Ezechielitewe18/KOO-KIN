@@ -12,3 +12,6 @@ Thumbs.db
 
 # Env locaux
 config/config.local.php
+
+# Captures d'écran locales
+captures/

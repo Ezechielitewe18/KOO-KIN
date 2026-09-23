@@ -6,6 +6,10 @@ require __DIR__ . '/includes/init.php';
 
 use KooKin\Core\Validation;
 use KooKin\Core\Flash;
+use KooKin\Core\ClientAuth;
+
+ClientAuth::requireLogin();
+$cl = ClientAuth::client();
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['traiteur'])) {
     csrf_check();
@@ -120,11 +124,11 @@ if (isset($_GET['merci'])): ?>
                     <div class="form__ligne">
                         <div class="champ">
                             <label for="nom">Nom *</label>
-                            <input type="text" id="nom" name="nom" value="<?= e(old('nom')) ?>" required maxlength="150" autocomplete="name">
+                            <input type="text" id="nom" name="nom" value="<?= e(old('nom', (string) ($cl['nom'] ?? ''))) ?>" required maxlength="150" autocomplete="name">
                         </div>
                         <div class="champ">
                             <label for="telephone">Téléphone *</label>
-                            <input type="tel" id="telephone" name="telephone" value="<?= e(old('telephone')) ?>" required placeholder="+243 ..." autocomplete="tel">
+                            <input type="tel" id="telephone" name="telephone" value="<?= e(old('telephone', (string) ($cl['telephone'] ?? ''))) ?>" required placeholder="+243 ..." autocomplete="tel">
                         </div>
                     </div>
                     <div class="form__ligne">
