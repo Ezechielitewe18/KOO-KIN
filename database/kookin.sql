@@ -295,10 +295,6 @@ CREATE TABLE `parametres_site` (
 INSERT INTO `admins` (`username`, `email`, `password_hash`, `role`) VALUES
 ('admin', 'contact@koo-kin.cd', '$2y$10$wZSRgsY5cJcmd/.1m0fo3e3lkdF8ZVdZuEWeL/7qSZRdB1mfUxb0W', 'superadmin');
 
--- Compte client de test : 0999000000 / client123
-INSERT INTO `clients` (`nom`, `telephone`, `email`, `mot_de_passe_hash`) VALUES
-('Client Test', '0999000000', 'client@test.cd', '$2y$10$0m3nngPU3ypU7ZuAG.RoweAE.74R2IFOcZhpoabfwa5hG/zwLcCVi');
-
 -- Catégories
 INSERT INTO `categories` (`nom`, `slug`, `description`, `icone`, `ordre`) VALUES
 ('Plats',            'plats',            'Nos plats principaux',          'plat', 1),
