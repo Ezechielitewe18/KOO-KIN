@@ -338,14 +338,6 @@ INSERT INTO `livraisons` (`commune`, `zone`, `tarif`, `delai`) VALUES
 ('Ngaliema',   'Toute commune', 6000, '50 min'),
 ('Kinshasa',   'Autres communes', 6000, '1h');
 
--- Réservations
-INSERT INTO `reservations` (`nom`, `telephone`, `nb_personnes`, `date_reservation`, `heure_reservation`, `message`, `statut`) VALUES
-('Amina Kalonji', '+243 8xx xxx xxx', 4, '2026-09-26', '19:30:00', 'Table près de la fenêtre', 'en_attente');
-
--- Promotions
-INSERT INTO `promotions` (`plat_id`, `nom`, `description`, `prix_normal`, `prix_promo`, `date_debut`, `date_fin`, `actif`) VALUES
-(3, 'Malua grillé', 'Offre du moment : poisson malua grillé à prix réduit, du lundi au vendredi.', 10000, 8000, '2026-09-01', '2026-10-01', 0);
-
 -- Horaires
 INSERT INTO `horaires` (`jour`, `libelle`, `ouverture`, `fermeture`, `ferme`) VALUES
 ('Lundi',     'Lundi',    '08:00:00', '22:00:00', 0),
